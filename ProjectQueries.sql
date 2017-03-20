@@ -1,5 +1,7 @@
 
-/*Get the names of SiteCustomers who have ordered ALL SiteProducts costing less than $1000.00.
+/*Potential problem with database is primary key of SiteAddresses being ZIP*/
+
+/* ****Get the names of SiteCustomers who have ordered ALL SiteProducts costing less than $1000.00.
 */
 
 select CNAME 
@@ -7,10 +9,14 @@ from SiteOrders natural join SiteCustomers
 where ONO not in 
 (select ONO from SiteOdetails natural join SiteProducts where PRICE > 1000);
 
+/* *****Get all SiteProducts costing less than $1000.00 (Can use in prepared statement to allow user-defined max price.
+*/
+
+select PNAME from SiteProducts where PRICE < 1000;
+
 /*Get the employee id numbers and names of SiteEmployees who have never 
 made a sale to a customer living in the same zip code as the employee.
  */
-
 
 select distinct SiteEmployees2.ENO,SiteEmployees2.ENAME 
 from SiteEmployees as SiteEmployees2,(select * from SiteOrders as SiteOrders2 natural join 
@@ -23,7 +29,7 @@ where SiteEmployees.ZIP = SiteCustomers.ZIP) as A)as B where B.ENO <> SiteEmploy
 
 select PNAME,sum(QTY) as Num_Sold from SiteProducts natural join SiteOdetails group by PNAME order by sum(QTY) desc;
 
-/*Get the average waiting time, i.e. difference between date ordered 
+/* *********Get the average waiting time, i.e. difference between date ordered 
 and date shipped, for all SiteOrders in number of days.
 */
 
