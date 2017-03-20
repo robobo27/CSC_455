@@ -2,11 +2,11 @@
 
 use drh4179
 
+drop table if exists SiteOdetails;
+drop table if exists SiteOrders;
 drop table if exists SiteEmployees;
 drop table if exists SiteCustomers;
 drop table if exists SiteProducts;
-drop table if exists SiteOrders;
-drop table if exists SiteOdetails;
 drop table if exists SiteAddresses;
 
 
@@ -51,7 +51,7 @@ CREATE TABLE SiteOrders (ONO varchar(6),
                       PRIMARY KEY(ONO),
                       FOREIGN KEY (CNO)
                       REFERENCES SiteCustomers(CNO)
-                      ON UPDATE CASCADE ON DELETE RESTRICT,
+                      ON UPDATE CASCADE ON DELETE CASCADE,
 					  FOREIGN KEY (ENO)
                       REFERENCES SiteEmployees(ENO)) ENGINE=INNODB;
 					  
