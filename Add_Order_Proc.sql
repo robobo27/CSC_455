@@ -13,7 +13,7 @@ DELIMITER  $$
 
  CREATE PROCEDURE AddOrder(in ordernumber integer, in customernumber integer,in receive date,in ship date)
    BEGIN
-   INSERT into SiteOrders (ONO,CNO,RECEIVED,SHIPPED) values (ordernumber,customernumber,receive,ship)
+   INSERT into SiteOrders (ONO,CNO,RECEIVED,SHIPPED) values (ordernumber,customernumber,receive,ship);
    END $$ 
 
 DELIMITER ;
