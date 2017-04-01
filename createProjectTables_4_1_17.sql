@@ -4,11 +4,10 @@ use drh4179
 
 drop table if exists SiteOdetails;
 drop table if exists SiteOrders;
-drop table if exists SiteEmployees;
 drop table if exists SiteCustomers;
 drop table if exists SiteProducts;
 drop table if exists SiteAddresses;
-drop trigger if exists ReduceQuantity;
+
 
 CREATE TABLE SiteProducts (PNO varchar(6),
                        PNAME varchar(30),
@@ -21,21 +20,8 @@ CREATE TABLE SiteProducts (PNO varchar(6),
 CREATE TABLE SiteAddresses (STREETADD varchar (30),
 					   ZIP varchar (6),
 					   CITY varchar (20),
-					   _STATE varchar (30),
-					   PRIMARY KEY (STREETADD, ZIP)) ENGINE=INNODB;
-CREATE TABLE LivesAt(CEMAIL varchar(40),
-					  CNAME varchar(100),
-					  STREETADD varchar(100),
-					  ZIP varchar(100),
-					  FOREIGN KEY CEMAIL 
-					  REFERENCES SiteCustomers(CEMAIL),
-					  FOREIGN KEY CNAME 
-					  REFERENCES SiteCustomers(CNAME),
-					  FOREIGN KEY (ZIP)
-                      REFERENCES SiteAddresses(ZIP),
-					  FOREIGN KEY STREETADD 
-					  REFERENCES SiteAddresses(STREETADD)
-                      ON UPDATE CASCADE ON DELETE CASCADE)	ENGINE=INNODB;
+					   CSTATE varchar (30),
+					   PRIMARY KEY (STREETADD)) ENGINE=INNODB;
 					   
 
 CREATE TABLE SiteCustomers (CEMAIL varchar(40),
@@ -44,7 +30,7 @@ CREATE TABLE SiteCustomers (CEMAIL varchar(40),
 					  ZIP varchar(6),
 					  PHONE varchar(15),
                       PRIMARY KEY(CEMAIL),
-                      FOREIGN KEY (ZIP)
+                      FOREIGN KEY(ZIP)
                       REFERENCES SiteAddresses(ZIP)
                       ON UPDATE CASCADE ON DELETE CASCADE) ENGINE=INNODB;
 					  
@@ -66,5 +52,3 @@ CREATE TABLE SiteOdetails (ONO varchar(6),
 					  PRIMARY KEY(ONO),
 					  FOREIGN KEY(PNO)
 					  REFERENCES SiteProducts(PNO)) ENGINE=INNODB;
-					  
-CREATE TRIGGER 
