@@ -18,6 +18,7 @@ CREATE TABLE SiteProducts (PNO varchar(6),
 					   DIMENSIONS varchar (10),
 					   MEDIUM varchar(50),
                        PRIMARY KEY (PNO)) ENGINE=INNODB;
+					   
 CREATE TABLE SiteAddresses (STREETADD varchar (30),
 					   ZIP varchar (6),
 					   CITY varchar (20),
