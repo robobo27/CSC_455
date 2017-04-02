@@ -10,7 +10,7 @@ delete from SiteAddresses;
 Currenty utilizing dummy variables for testing purposes
 */
 		
-insert into SiteAddresses
+insert into SiteAddresses2
 	values	('4581 Cherry Street','67226','Wichita', 'Kansas'),
 			('3321 Columbus Avenue','60606','Fort Dodge', 'Iowa'),
 			('1234 Number Lane','50302','Kansas City', 'Kansas'),
@@ -21,7 +21,7 @@ insert into SiteAddresses
 			('1051 S. Kerr Avenue','28411','Wilmington','North Carolina');
 			
 			
-insert into SiteProducts
+insert into SiteProducts2
 	values	('01','image1',1,LOAD_FILE('image1.jpg'),2000,'18x24','Oil on panel'),
 			('03','image3',1,LOAD_FILE('image3.jpg'),3000,'36x48','Acrylic on canvas'),
 			('04','image4',1,LOAD_FILE('image4.jpg'),1800,'18x24','Acrylic on canvas'),
@@ -40,7 +40,7 @@ insert into SiteCustomers
 		   ('Keely@gmail.com','Keely','416-111-1236'),
 		   ('Maera@gmail.com','Maera','416-111-1235');					
 
-insert into SiteOrders
+insert into SiteOrders2
 	values	('201','Charles@gmail.com','1994-12-10','1994-12-12'),
 			('202','Barbara@gmail.com''1995-01-12','1995-01-15'),
 			('203','Charles@gmail.com','1995-02-13','1995-02-20'),
@@ -48,7 +48,7 @@ insert into SiteOrders
 			('205','Charles@gmail.com','2003-02-15','2003-02-16'),
 			('206','5555','2003-02-15','2003-02-16');
 			
-insert into SiteOdetails
+insert into SiteOdetails2
 	values	('201','01',1),
 			('202','03',1),
 			('203','04',1),
