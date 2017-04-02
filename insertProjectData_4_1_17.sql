@@ -1,10 +1,12 @@
 -- no-auto-rehash
+delete from LivesAt;
 delete from SiteOdetails;
 delete from SiteOrders;
 delete from SiteCustomers;
 delete from SiteEmployees;
 delete from SiteProducts;
 delete from SiteAddresses;
+
 		
 /*
 Currenty utilizing dummy variables for testing purposes
@@ -31,7 +33,7 @@ insert into SiteProducts2
 			('08','image8',1,LOAD_FILE('image8.jpg'),950,'28x36','Color pencil on paper'),
 			('09','image9',1,LOAD_FILE('image9.jpg'),3000,'36x48','Acrylic on canvas');		
 
-insert into SiteCustomers
+insert into SiteCustomers2
 	values ('Charles@gmail.com','Charles','316-636-555'),
 		   ('Bertram@gmail.com','Bertram','316-689-5555'),
 		   ('Barbara@gmail.com','Barbara','316-111-1234'),
