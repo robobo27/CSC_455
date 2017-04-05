@@ -4,22 +4,11 @@ delete from OurOdetails;
 delete from OurOrders;
 delete from OurCustomers;
 delete from OurProducts;
-delete from OurAddresses;
 
 		
 /*
 Currenty utilizing dummy variables for testing purposes
 */
-		
-insert into OurAddresses
-	values	('4581 Cherry Street','67226','Wichita', 'Kansas'),
-			('3321 Columbus Avenue','60606','Fort Dodge', 'Iowa'),
-			('1234 Number Lane','50302','Kansas City', 'Kansas'),
-			('387 Short Street','54444','Columbia','South Carolina'),
-			('7098 Dismy Court','66002','Liberal','Kansas'),
-			('2121 Jump Street','61111','Fort Hays','Kansas'),
-			('1051 Page Avenue','28403','Wilmington','North Carolina'),
-			('1051 S. Kerr Avenue','28411','Wilmington','North Carolina');
 			
 			
 insert into OurProducts
@@ -39,7 +28,17 @@ insert into OurCustomers
 		   ('Will@gmail.com','Will','416-111-1234'),
 		   ('Bill@gmail.com','Bill','416-111-1235'),
 		   ('Keely@gmail.com','Keely','416-111-1236'),
-		   ('Maera@gmail.com','Maera','416-111-1235');					
+		   ('Maera@gmail.com','Maera','416-111-1235');		
+
+insert into LivesAt
+	values	('Charles@gmail.com','4581 Cherry Street','67226','Wichita', 'Kansas'),
+			('Bertram@gmail.com','3321 Columbus Avenue','60606','Fort Dodge', 'Iowa'),
+			('Barbara@gmail.com','1234 Number Lane','50302','Kansas City', 'Kansas'),
+			('Will@gmail.com','387 Short Street','54444','Columbia','South Carolina'),
+			('Bill@gmail.com','7098 Dismy Court','66002','Liberal','Kansas'),
+			('Keely@gmail.com','2121 Jump Street','61111','Fort Hays','Kansas'),
+			('Maera@gmail.com','1051 Page Avenue','28403','Wilmington','North Carolina'),
+			('Maera@gmail.com','1051 S. Kerr Avenue','28411','Wilmington','North Carolina');		   
 
 insert into OurOrders
 	values	('201','Charles@gmail.com','1994-12-10','1994-12-12'),
@@ -56,15 +55,3 @@ insert into OurOdetails
 			('204','05',1),
 			('205','06',1),
 			('206','07',1);
-
-insert into LivesAt
-	values ('Charles@gmail.com','4581 Cherry Street','67226'),
-		   ('Bertram@gmail.com','3321 Columbus Avenue','60606'),
-		   ('Barbara@gmail.com','1234 Number Lane','50302'),
-		   ('Will@gmail.com','387 Short Street','54444'),
-		   ('Bill@gmail.com','7098 Dismy Court','66002'),
-		   ('Keely@gmail.com','2121 Jump Street','61111'),
-		   ('Maera@gmail.com','1051 Page Avenue','28403');
-			
-			
-			
