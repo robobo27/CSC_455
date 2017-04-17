@@ -9,12 +9,12 @@ drop procedure IF EXISTS AddOrder;
 #Thus semi-colons are no longer treated as delimiters
 #and the entire procedure is viewed as a single code block
 
-DELIMITER  $$ 
+DELIMITER  $$
 
- CREATE PROCEDURE AddOrder(in ordernumber integer, in customernumber integer,in receive date,in ship date)
+ CREATE PROCEDURE AddOrder(in ordernumber integer, in customeremail varchar(50),in receive date,in ship date)
    BEGIN
-   INSERT into SiteOrders (ONO,CNO,RECEIVED,SHIPPED) values (ordernumber,customernumber,receive,ship);
-   END $$ 
+   INSERT into SiteOrders (ONO,CNO,RECEIVED,SHIPPED) values (ordernumber,customeremail,receive,ship);
+   END $$
 
 DELIMITER ;
 #Restore delimiter to ;
