@@ -5,6 +5,7 @@
 
 /* Allows to see all shipped and received dates to get an average idea of delivery time. */
    
-create view Deliveries as select RECEIVED,SHIPPED
+create view DeliveryTime as select 
+RECEIVED,SHIPPED,datediff(SHIPPED,RECEIVED)as DeliveryTime
 from OurOrders;
 
