@@ -1,3 +1,5 @@
+
+use narayan11;
 drop function IF EXISTS NumOrders;
 
 #Change delimiter to $$
@@ -13,7 +15,7 @@ CREATE FUNCTION NumOrders(customer_email varchar(50)) RETURNS INT
     DETERMINISTIC
 BEGIN
     DECLARE orders INT;
-    select count(ono) into orders from OurOrders natural join OurOdetails group by cemail having cemail = customer_email;
+    select count(ono) into orders from OurOrders group by cemail having cemail = customer_email;
 
 
  RETURN (orders);
