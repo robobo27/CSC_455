@@ -7,3 +7,4 @@
    
 create view Deliveries as select RECEIVED,SHIPPED
 from OurOrders;
+
