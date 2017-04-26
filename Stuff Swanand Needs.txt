@@ -1,0 +1,7 @@
+Names of views:
+
+viewDelTime.sql -> DeliveryTime
+
+whoHasOrdered.sql -> WhoHasOrdered
+
+ensureAddress -> NoAdresses (Should return empty. This ensures everyone has an address.)
