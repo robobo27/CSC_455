@@ -9,8 +9,8 @@ DELIMITER $$
 
 #Function accepts cemail and returns a int value of number of orders placed by the CEMAIL
 #select cname,NumOrders(cemail) from OurCustomers;
-####
-####
+
+##This is where we use a group by for our project requirement 
 CREATE FUNCTION NumOrders(customer_email varchar(50)) RETURNS INT
     DETERMINISTIC
 BEGIN

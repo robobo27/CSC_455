@@ -11,14 +11,14 @@ Currenty utilizing dummy variables for testing purposes
 
 
 insert into OurProducts
-	values	('01','image1',1,'image1.jpg',2000,'18x24','Oil on panel'),
-			('03','image3',1,'image3.jpg',3000,'36x48','Acrylic on canvas'),
-			('04','image4',1,'image4.jpg',1800,'18x24','Acrylic on canvas'),
-			('05','image5',1,'image5.jpg',2700,'36x48','Acrylic on canvas'),
-			('06','image6',1,'image6.jpg',1500,'16x20','Acrylic and color pencil on panel'),
-			('07','image7',1,'image7.jpg',500,'9x12','Acrylic on canvas'),
-			('08','image8',1,'image8.jpg',950,'28x36','Color pencil on paper'),
-			('09','image9',1,'image9.jpg',3000,'36x48','Acrylic on canvas');
+	values	('01','image1',1,'D:\image1.jpg',2000,'18x24','Oil on panel'),
+			('03','image3',1,'D:\image3.jpg',3000,'36x48','Acrylic on canvas'),
+			('04','image4',1,'D:\image4.jpg',1800,'18x24','Acrylic on canvas'),
+			('05','image5',1,'D:\image5.jpg',2700,'36x48','Acrylic on canvas'),
+			('06','image6',1,'D:\image6.jpg',1500,'16x20','Acrylic and color pencil on panel'),
+			('07','image7',1,'D:\image7.jpg',500,'9x12','Acrylic on canvas'),
+			('08','image8',1,'D:\image8.jpg',950,'28x36','Color pencil on paper'),
+			('09','image9',1,'D:\image9.jpg',3000,'36x48','Acrylic on canvas');
 
 insert into OurCustomers
 	values ('Charles@gmail.com','Charles','316-636-555'),
